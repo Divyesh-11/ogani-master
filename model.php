@@ -14,7 +14,7 @@ class model
         $col_arr = array_keys($data);
         $col = implode(',', $col_arr);
         $val_arr = array_values($data);
-        $value = implode(",", $val_arr);
+        $value = implode("', '", $val_arr);
         // echo $value;
         // exit();
 
@@ -22,8 +22,8 @@ class model
         // echo $sql;
         // exit(); 
         $run = $this->conn->query($sql);
-        echo $run;
-        exit();
+        // echo $run;
+        // exit();
         if ($run) {
             echo "<script>
                 alert('Record inserted...!')
