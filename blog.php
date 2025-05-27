@@ -99,8 +99,10 @@
                                     <li><i class="fa fa-comment-o"></i> 5</li>
                                 </ul>
                                 <h5><a href="#">6 ways to prepare breakfast for 30</a></h5>
-                                <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam
-                                    quaerat </p>
+                                <p>
+                                    Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam
+                                    quaerat
+                                </p>
                                 <a href="#" class="blog__btn">READ MORE <span class="arrow_right"></span></a>
                             </div>
                         </div>
@@ -115,7 +117,7 @@
                                     <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
                                     <li><i class="fa fa-comment-o"></i> 5</li>
                                 </ul>
-                                <h5><a href="#">Visit the clean farm in the US</a></h5>
+                                <h5><a href="#">Visit the clean farm in the India</a></h5>
                                 <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam
                                     quaerat </p>
                                 <a href="#" class="blog__btn">READ MORE <span class="arrow_right"></span></a>

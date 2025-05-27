@@ -7,9 +7,9 @@
                         <a href="./index.php"><img src="img/logo.png" alt=""></a>
                     </div>
                     <ul>
-                        <li>Address: 60-49 Road 11378 New York</li>
-                        <li>Phone: +65 11.188.888</li>
-                        <li>Email: hello@colorlib.com</li>
+                        <li>Address: ShopNo.51 panchavti complex Vastral,Ahmedabad</li>
+                        <li>Phone: +91 9265182201</li>
+                        <li>Email: divyeshkarngiya51@gmail.com</li>
                     </ul>
                 </div>
             </div>
