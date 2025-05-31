@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 </head>
 
 <style>
@@ -83,10 +85,10 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="header__top__right">
                             <div class="header__top__right__social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
-                                <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
                             </div>
                             <div class="header__top__right__language">
                                 <img src="img/language.png" alt="">
@@ -98,7 +100,19 @@
                                 </ul>
                             </div>
                             <div class="header__top__right__auth">
-                                <a href="login"><i class="fa fa-user"></i> Login</a>
+                                <?php
+                                if (isset($_SESSION['user'])) {
+                                ?>
+                                    <div class="login" style="display: flex; gap:10px">
+                                        <a href="index"><i class="fa fa-user"></i><?php echo $_SESSION['user']; ?></a>
+                                        <a href="login" onclick="confirm('Are you sure you want to log out?');">Logout <i class="fa-solid fa-right-from-bracket"></i></a>
+                                    </div>
+                                <?php
+                                } else {
+                                ?>
+                                    <a href="login"><i class="fa fa-user"></i> Login</a>
+                                <?php }
+                                ?>
                             </div>
                         </div>
                     </div>
@@ -224,7 +238,7 @@
                             <span>FRUIT FRESH</span>
                             <h2>Vegetable <br />100% Organic</h2>
                             <p>Free Pickup and Delivery Available</p>
-                            <a href="#" class="primary-btn">SHOP NOW</a>
+                            <a href="shop-grid" class="primary-btn">SHOP NOW</a>
                         </div>
                     </div>
                 </div>

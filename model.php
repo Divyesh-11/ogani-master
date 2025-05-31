@@ -15,19 +15,34 @@ class model
         $col = implode(',', $col_arr);
         $val_arr = array_values($data);
         $value = implode("', '", $val_arr);
-        // echo $value;
-        // exit();
 
         $sql = "INSERT INTO $table ($col) VALUES ('$value')";
-        // echo $sql;
-        // exit(); 
+
         $run = $this->conn->query($sql);
-        // echo $run;
-        // exit();
+
         if ($run) {
             echo "<script>
-                alert('Record inserted...!')
+                alert('Record inserted...!');
+                window.location.href = 'login';
             </script>";
         }
+    }
+
+    function slect_login($table, $data)
+    {
+
+        $arr_col = array_keys($data);
+        $arr_val = array_values($data);
+
+        $login_fetch = "SELECT * FROM ragister_data WHERE 1 = 1 ";
+
+        $i = 0;
+        foreach ($data as $colm) {
+            $login_fetch .= " and $arr_col[$i] = '$arr_val[$i]'";
+            $i++;
+        }
+
+        $login_run = $this->conn->query($login_fetch);
+        return $login_run;
     }
 };

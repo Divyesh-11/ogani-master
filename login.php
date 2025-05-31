@@ -36,15 +36,16 @@
 
 <div class="cont">
 
-    <form>
+    <form method="post">
         <div class="login">
             <h3>Sign IN</h3>
-            <input type="email" name="email" placeholder="Email"><br>
+            <input type="email" name="email" placeholder="Email" <?php #echo htmlspecialchars($loginemail) 
+                                                                    ?>><br>
             <input type="password" name="pass" placeholder="Password"><br>
-            <input type="submit" class="btn btn-sm btn-primary" value="Sing In">
+            <input type="submit" class="btn btn-sm btn-primary" value="Sing In" name="login">
         </div>
 
-        <a href="register">Not registered? Click here</a>
+        <a href="register">Not registered ? Click here</a>
     </form>
 </div>
 

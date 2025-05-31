@@ -5,12 +5,11 @@ class control extends model
 
     function __construct()
     {
+
+        session_start();
         // model::__construct();
         parent::__construct();
         $url = $_SERVER['PATH_INFO'];
-        // if ($this->conn) {
-        //     echo "123";
-        // }
 
         switch ($url) {
             case "/index":
@@ -33,12 +32,44 @@ class control extends model
                 include 'contact.php';
                 break;
 
+            case  "/logout":
+                unset($_SESSION['user']);
+                header("location:index");
+
             case "/login":
                 include 'login.php';
-                break;
 
-            case "/main":
-                include 'main.php';
+                if (isset($_POST['login'])) {
+                    $loginemail = $_POST['email'];
+                    $loginpass = $_POST['pass'];
+
+                    $data = ['uemail' => $loginemail, 'upass' => $loginpass];
+                    $login_run = $this->slect_login('ragister_data', $data);
+
+                    $fetch = $login_run->fetch_object();
+
+                    $dbemail = $fetch->uemail;
+                    $bdpass = $fetch->upass;
+                    $bdname = $fetch->uname;
+                    $bdimage = $fetch->uimage;
+                    // echo $bdname;
+                    // exit();
+
+                    $_SESSION['user'] = $bdname;
+                    $_SESSION['image'] = $bdimage;
+
+                    if ($dbemail == $loginemail && $bdpass == $loginpass) {
+                        echo "<script>
+                                alert('Welcome user...!')
+                                window.location.href = 'index';
+                              </script>";
+                    } else {
+                        echo "<script>
+                                alert('Invaild useremail / password...!')
+                                window.location.href = 'login';
+                              </script>";
+                    }
+                }
                 break;
 
             case "/register":
@@ -52,8 +83,18 @@ class control extends model
                     $tmp_file = $_FILES['file']['tmp_name'];
                     move_uploaded_file($tmp_file, "uploads/" . $image);
 
-                    $data = ['uname' => $name, 'uemail' => $email, 'upass' => $password, 'umobile' => $mobile, 'uimage' => $image];
-                    $this->insert('ragister_data', $data);
+                    if ($name != "" && $email != "" && $password != "" && $mobile != "" && $image != "") {
+                        if ($password == $confime_password) {
+
+                            $data = ['uname' => $name, 'uemail' => $email, 'upass' => $password, 'umobile' => $mobile, 'uimage' => $image];
+                            $this->insert('ragister_data', $data);
+                        } else {
+                            echo "<script>
+                                alert('Password is not metch plase enter vaild password...!')
+                                window.location.href = 'register';
+                              </script>";
+                        }
+                    }
                 }
 
                 include 'register.php';
