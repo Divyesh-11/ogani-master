@@ -50,7 +50,6 @@ include "header.php";
                     <ul>
                         <li class="active" data-filter="*">All</li>
                         <li data-filter=".oranges">Oranges</li>
-                        <li data-filter=".fresh-meat">Fresh Meat</li>
                         <li data-filter=".vegetables">Vegetables</li>
                         <li data-filter=".fastfood">Fastfood</li>
                     </ul>

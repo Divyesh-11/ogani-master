@@ -1,4 +1,4 @@
-<?php include "header.php" ?>
+<?php include "hader_2.php" ?>
 
 
 <!-- Blog Details Hero Begin -->

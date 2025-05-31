@@ -1,5 +1,39 @@
-<?php include "header.php" ?>
+<?php include "hader_2.php" ?>
 
+<style>
+    option {
+        text-decoration: none;
+        color: blueviolet;
+    }
+
+    .filter {
+        position: relative;
+        display: block;
+
+    }
+
+    .inerdiv {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        width: 90%;
+    }
+
+    .inerdiv option {
+        text-decoration: none;
+        display: block;
+    }
+
+    .filter:hover .inerdiv {
+        display: block;
+
+    }
+
+    .filter:hover {
+        margin-bottom: 100px;
+        transition: 0.5s;
+    }
+</style>
 
 <!-- Breadcrumb Section Begin -->
 <section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb.jpg">
@@ -9,7 +43,7 @@
                 <div class="breadcrumb__text">
                     <h2>Organi Shop</h2>
                     <div class="breadcrumb__option">
-                        <a href="./index.php">Home</a>
+                        <a href="./index">Home</a>
                         <span>Shop</span>
                     </div>
                 </div>
@@ -28,16 +62,21 @@
                     <div class="sidebar__item">
                         <h4>Department</h4>
                         <ul>
-                            <li><a href="#">Fresh Meat</a></li>
-                            <li><a href="#">Vegetables</a></li>
-                            <li><a href="#">Fruit & Nut Gifts</a></li>
-                            <li><a href="#">Fresh Berries</a></li>
-                            <li><a href="#">Ocean Foods</a></li>
-                            <li><a href="#">Butter & Eggs</a></li>
-                            <li><a href="#">Fastfood</a></li>
-                            <li><a href="#">Fresh Onion</a></li>
-                            <li><a href="#">Papayaya & Crisps</a></li>
-                            <li><a href="#">Oatmeal</a></li>
+                            <li class="filter">
+                                <a href="/shop-grid" class="vag">Vegetables</a>
+                                <ul class="inerdiv">
+                                    <li><a href="./Basic-vegetables">Basic vegetables</a></li>
+                                    <li><a href="./Premium-vagitables">Premium vagitables</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="filter">
+                                <a href="/shop-grid">Fruit</a>
+                                <ul class="inerdiv">
+                                    <li><a href="./Basic-Fruits">Basic Fruits</a></li>
+                                    <li><a href="./Premium-Fruits">Premium Fruits</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                     <div class="sidebar__item">

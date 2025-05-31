@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ogani | Template</title>
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
@@ -22,6 +23,41 @@
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
+
+<style>
+    option {
+        text-decoration: none;
+        color: blueviolet;
+    }
+
+    .filter {
+        position: relative;
+        display: block;
+
+    }
+
+    .inerdiv {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        width: 90%;
+    }
+
+    .inerdiv option {
+        text-decoration: none;
+        display: block;
+    }
+
+    .filter:hover .inerdiv {
+        display: block;
+
+    }
+
+    .filter:hover {
+        margin-bottom: 130px;
+        transition: 0.5s;
+    }
+</style>
 
 <body>
     <!-- Page Preloder -->
@@ -84,12 +120,10 @@
                             <li><a href="#">Pages</a>
                                 <ul class="header__menu__dropdown">
                                     <li><a href="./shop-details">Shop Details</a></li>
-                                    <li><a href="./shoping-cart">Shoping Cart</a></li>
                                     <li><a href="./checkout">Check Out</a></li>
                                     <li><a href="./blog-details">Blog Details</a></li>
                                 </ul>
                             </li>
-                            <li><a href="./blog">Blog</a></li>
                             <li><a href="./contact">Contact</a></li>
                         </ul>
                     </nav>
@@ -121,15 +155,47 @@
                             <span>All departments</span>
                         </div>
                         <ul>
-                            <li><a href="#">Vegetables</a></li>
-                            <li><a href="#">Fruit & Nut Gifts</a></li>
-                            <li><a href="#">Fresh Berries</a></li>
-                            <li><a href="#">Butter</a></li>
-                            <li><a href="#">Fastfood</a></li>
-                            <li><a href="#">Fresh Onion</a></li>
-                            <li><a href="#">Papayaya & Crisps</a></li>
-                            <li><a href="#">Oatmeal</a></li>
-                            <li><a href="#">Fresh Bananas</a></li>
+                            <li class="filter">
+                                <a href="#" class="vag">Vegetables</a>
+                                <ul class="inerdiv">
+                                    <li><a href="./Basic-vegetables">Basic vegetables</a></li>
+                                    <li><a href="./Premium-vagitables">Premium vagitables</a></li>
+                                </ul>
+                            </li>
+                            <li class="filter">
+                                <a href="#">Fruit</a>
+                                <ul class="inerdiv">
+                                    <li><a href="./Basic-Fruits">Basic Fruits</a></li>
+                                    <li><a href="./Premium-Fruits">Premium Fruits</a></li>
+                                </ul>
+                            </li>
+                            <li class="filter">
+                                <a href="#">Dairy Prodcts</a>
+                                <ul class="inerdiv">
+                                    <li><a href="./Milk-Buttermilk-curd">Milk Buttermilk curd</a></li>
+                                    <li><a href="./Paneer-Butter-Chese">Paneer Butter Chese</a></li>
+                                    <li><a href="./Chocolates">Chocolates</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="filter">
+                                <a href="#">Snackes & packaged food</a>
+                                <ul class="inerdiv">
+                                    <li><a href="./Biscuits-cookies">Biscuits & cookies</a></li>
+                                    <li><a href="./Drinks-juice">Drinks & juice</a></li>
+                                    <li><a href="./Chips-namkins">Chips & namkins</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="filter">
+                                <a href="#">Home</a>
+                                <ul class="inerdiv">
+                                    <li><a href="./Detergent-cleaners">Detergent & cleaners</a></li>
+                                    <li><a href="./Bathroom-Laundries">Bathroom & Laundries</a></li>
+                                    <li><a href="./Dishwash">Dishwash</a></li>
+                                    <li><a href="./Home-cleaning-tools">Home cleaning & tools</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -139,7 +205,6 @@
                             <form action="#">
                                 <div class="hero__search__categories">
                                     All Categories
-                                    <span class="arrow_carrot-down"></span>
                                 </div>
                                 <input type="text" placeholder="What do yo u need?">
                                 <button type="submit" class="site-btn">SEARCH</button>

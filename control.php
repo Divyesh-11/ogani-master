@@ -21,11 +21,6 @@ class control extends model
                 include 'blog-details.php';
                 break;
 
-
-            case "/blog":
-                include 'blog.php';
-                break;
-
             case "/cart":
                 include 'cart.php';
                 break;
@@ -73,9 +68,59 @@ class control extends model
                 include 'shop-grid.php';
                 break;
 
+            case "/Premium-vagitables":
+                include 'Premium-vagitables.php';
+                break;
 
-            case "/shoping-cart":
-                include 'shoping-cart.php';
+            case "/Basic-vegetables":
+                include 'Basic-vegetables.php';
+                break;
+
+            case "/Basic-Fruits":
+                include 'Basic-Fruits.php';
+                break;
+
+            case "/Premium-Fruits":
+                include 'Premium-Fruits.php';
+                break;
+
+            case "/Chocolates":
+                include 'Chocolates.php';
+                break;
+
+            case "/Paneer-Butter-Chese":
+                include 'Paneer-Butter-Chese.php';
+                break;
+
+            case "/Milk-Buttermilk-curd":
+                include 'Milk-Buttermilk-curd.php';
+                break;
+
+            case "/Biscuits-cookies":
+                include 'Biscuits-cookies.php';
+                break;
+
+            case "/Drinks-juice":
+                include 'Drinks-juice.php';
+                break;
+
+            case "/Chips-namkins":
+                include 'Chips-namkins.php';
+                break;
+            case "/Bathroom-Laundries":
+                include 'Bathroom-Laundries.php';
+                break;
+
+            case "/Detergent-cleaners":
+                include 'Detergent-cleaners.php';
+                break;
+
+            case "/Dishwash":
+                include 'Dishwash.php';
+                break;
+
+            case "/Home-cleaning-tools":
+                include 'Home-cleaning-tools.php';
                 break;
         }
     }

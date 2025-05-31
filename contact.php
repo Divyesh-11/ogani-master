@@ -1,4 +1,4 @@
-<?php include "header.php"; ?>
+<?php include "hader_2.php" ?>
 
 
 <!-- Breadcrumb Section Begin -->
@@ -9,7 +9,7 @@
                 <div class="breadcrumb__text">
                     <h2>Contact Us</h2>
                     <div class="breadcrumb__option">
-                        <a href="./index.php">Home</a>
+                        <a href="./index">Home</a>
                         <span>Contact Us</span>
                     </div>
                 </div>
