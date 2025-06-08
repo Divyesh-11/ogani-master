@@ -35,6 +35,7 @@ class control extends model
             case  "/logout":
                 unset($_SESSION['user']);
                 header("location:index");
+                break;
 
             case "/login":
                 include 'login.php';
